@@ -40,5 +40,4 @@ module HorizontalRuler
     double(render_dots)
   end
 
-
 end
