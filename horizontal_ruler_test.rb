@@ -22,7 +22,9 @@ class HorizontalRulerTest < MiniTest::Test
     expected =  "========================================\n" +
                 "========================================"
 
-    assert_equal expected, @h_ruler.double(render_bars)
+    assert_equal expected, @h_ruler.double_render_bars
+    assert_equal expected, @h_ruler.double(@h_ruler.render_bars)
+
   end
 
   def test_it_can_render_a_bunch_of_dots
@@ -35,7 +37,9 @@ class HorizontalRulerTest < MiniTest::Test
     expected =  "::::::::::::::::::::::::::::::::::::::::\n" +
                 "::::::::::::::::::::::::::::::::::::::::"
 
-    assert_equal expected, @h_ruler.double(render_dots)
+    assert_equal expected, @h_ruler.double_render_dots
+    assert_equal expected, @h_ruler.double(@h_ruler.render_dots)
+
   end
 
   def test_it_can_render_squiggles_left_or_right
