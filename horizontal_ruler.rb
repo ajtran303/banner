@@ -32,4 +32,13 @@ module HorizontalRuler
     render_squiggles_left + "\n" + render_squiggles_right
   end
 
+  def double_render_bars
+    double(render_bars)
+  end
+
+  def double_render_dots
+    double(render_dots)
+  end
+
+
 end
