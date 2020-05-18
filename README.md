@@ -1,4 +1,4 @@
-# h_ruler.rb
+# horizontal_ruler.rb
 
 A Ruby Module for pretty printing horizontal rules for Command Line Interface.
 

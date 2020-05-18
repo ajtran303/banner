@@ -1,4 +1,4 @@
-require "./h_ruler"
+require "./horizontal_ruler"
 require "minitest/autorun"
 require "minitest/pride"
 
@@ -14,7 +14,7 @@ class HorizontalRulerTest < MiniTest::Test
 
   def test_it_can_render_bars
     expected =  "========================================"
-    
+
     assert_equal expected, @h_ruler.render_bars
   end
 
