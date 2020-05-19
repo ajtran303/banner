@@ -1,6 +1,6 @@
 # horizontal_ruler.rb
 
-A Ruby Module to easily pretty print horizontal rules to the Command Line.
+A Ruby program to easily pretty print horizontal rules to the Command Line.
 
 ### `$ ruby horizontal_ruler_demo.rb`
 
