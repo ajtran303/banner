@@ -1,8 +1,6 @@
 require "./horizontal_ruler"
 
-class HorizontalRulerSample
-
-  include HorizontalRuler
+class HorizontalRulerDemo < HorizontalRuler
 
   def initialize
     autorun
@@ -13,7 +11,7 @@ class HorizontalRulerSample
   end
 
   def intro
-    "A Ruby Module to easily pretty print\n"+
+    "A Ruby program to easily pretty print\n"+
     "horizontal rules to the Command Line."
   end
 
@@ -33,18 +31,18 @@ class HorizontalRulerSample
     puts render_super_squiggles
     puts title
     puts render_super_squiggles
-    puts ""
+    puts
     puts intro
-    puts ""
+    puts
     puts double_render_dots
-    puts ""
+    puts
     puts body
-    puts ""
+    puts
     puts render_bars
-    puts ""
+    puts
     puts ending
   end
 
 end
 
-HorizontalRulerSample.new
+HorizontalRulerDemo.new

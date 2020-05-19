@@ -2,14 +2,10 @@ require "./horizontal_ruler"
 require "minitest/autorun"
 require "minitest/pride"
 
-class HorizontalRulerTestClass
-  include HorizontalRuler
-end
-
 class HorizontalRulerTest < MiniTest::Test
 
   def setup
-    @h_ruler = HorizontalRulerTestClass.new
+    @h_ruler = HorizontalRuler.new
   end
 
   def test_it_can_render_bars
@@ -23,8 +19,6 @@ class HorizontalRulerTest < MiniTest::Test
                 "========================================"
 
     assert_equal expected, @h_ruler.double_render_bars
-    assert_equal expected, @h_ruler.double(@h_ruler.render_bars)
-
   end
 
   def test_it_can_render_a_bunch_of_dots
@@ -38,8 +32,6 @@ class HorizontalRulerTest < MiniTest::Test
                 "::::::::::::::::::::::::::::::::::::::::"
 
     assert_equal expected, @h_ruler.double_render_dots
-    assert_equal expected, @h_ruler.double(@h_ruler.render_dots)
-
   end
 
   def test_it_can_render_squiggles_left_or_right
@@ -55,6 +47,14 @@ class HorizontalRulerTest < MiniTest::Test
                 " ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~"
 
     assert_equal expected, @h_ruler.render_super_squiggles
+  end
+
+  def test_it_has_a_helper_method_to_duplicate_chars_any_number_of_times
+    expected =  "========================================"
+
+    assert_equal expected, @h_ruler.send(:duplicate, "=", 40)
+    # testing private method
+    # NOT A GREAT PRACTICE! IT WILL WORK THOUGH NOT ENCOURAGED
   end
 
 end

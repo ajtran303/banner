@@ -11,7 +11,7 @@ A Ruby Module to easily pretty print horizontal rules to the Command Line.
 ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
  ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
 
-A Ruby Module to easily pretty print
+A Ruby program to easily pretty print
 horizontal rules to the Command Line.
 
 ::::::::::::::::::::::::::::::::::::::::
