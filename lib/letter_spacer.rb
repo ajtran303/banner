@@ -3,35 +3,35 @@ class LetterSpacer
 
   def initialize(message)
     @message = message
-    @output = space_it[0...40]
+    @output = get_spaced_message[0...40]
   end
 
   private
 
-  def split_it
+  def generate_message_as_characters
     @message.join.split("")
   end
 
-  def generate_spaces
-    split_it.map {|c| " "}
+  def generate_spaces_equal_to_characters
+    generate_message_as_characters.map {|c| " "}
   end
 
-  def zip_it
-    split_it.zip(generate_spaces).flatten!
+  def merge_characters_and_spaces
+    generate_message_as_characters.zip(generate_spaces_equal_to_characters).flatten!
   end
 
-  def string_it
-    zip_it.join
+  def generate_message_as_string
+    merge_characters_and_spaces.join
   end
 
-  def needed_spaces
-    ((40 - string_it.length) / 2)
+  def generate_spaces_to_prepend
+    ((40 - generate_message_as_string.length) / 2)
   end
 
-  def space_it
-    s = string_it
-    needed_spaces.times { s.prepend(" ") }
-    s
+  def get_spaced_message
+    new_message = generate_message_as_string
+    generate_spaces_to_prepend.times { new_message.prepend(" ") }
+    new_message
   end
 
 end
