@@ -2,7 +2,7 @@
 
 A Ruby program to easily print pretty banner messages.
 
-#### $ ruby banner_printer -ss 'YOU CAN DO IT'
+#### `$ ruby banner_printer -ss 'YOU CAN DO IT'`
 ```
 ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
  ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
@@ -25,7 +25,7 @@ The flag argument can be set to one of the following:
 
 ## What is a horizontal rule?
 
-#### $ ruby util/horizontal_ruler_demo.rb
+#### `$ ruby util/horizontal_ruler_demo.rb`
 
 
 ```
