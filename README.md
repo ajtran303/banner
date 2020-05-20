@@ -2,7 +2,7 @@
 
 A Ruby program to easily print pretty banner messages.
 
-#### $ ruby banner_printer -ss 'HELLO WORLD'
+#### $ ruby banner_printer -ss 'YOU CAN DO IT'
 ```
 ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
  ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
