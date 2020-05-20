@@ -1,8 +1,8 @@
-# banner_printer.rb
+# banner.rb.rb
 
 A Ruby program to easily print pretty banner messages.
 
-#### `$ ruby banner_printer -ss 'YOU CAN DO IT'`
+#### `$ ruby banner.rb -ss 'YOU CAN DO IT'`
 ```
 ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
  ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
@@ -11,16 +11,45 @@ A Ruby program to easily print pretty banner messages.
  ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
 ```
 
-The flag argument can be set to one of the following:
+#### `$ ruby banner.rb -help`
 
 ```
-  -b = bars,
-  -db = double bars,
-  -d = dots,
-  -dd = double dots,
-  -sl = squiggles (left),
-  -sr = squiggles (right),
-  -ss = super squiggles
+~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
+Utility to pretty-print banner messages.
+~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
+
+$ ruby banner.rb -h/-help
+
+> Display this help menu and exit
+> Use flags to set horizontal rule
+> Use single-quotes to wrap input
+
+========================================
+$ ruby banner.rb -b 'BARS'
+
+========================================
+========================================
+$ ruby banner.rb -db 'DOUBLE BARS'
+
+::::::::::::::::::::::::::::::::::::::::
+$ ruby banner.rb -d 'DOTS'
+
+::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::
+$ ruby banner.rb -dd 'DOUBLE DOTS'
+
+~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
+$ ruby banner.rb -sr 'SQUIGGLES-RIGHT'
+
+~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
+$ ruby banner.rb -sl 'SQUIGGLES-LEFT'
+
+~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
+~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
+$ ruby banner.rb -ss 'SUPER-SQUIGGLES'
+
+banner.rb by AJ Tran, May 2020
+https://github.com/ajtran303/banner
 ```
 
 ## What is a horizontal rule?
