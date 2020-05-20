@@ -55,7 +55,6 @@ $ ruby banner.rb -ss 'SUPER-SQUIGGLES'
 
 Found a bug? Let me know!
 https://github.com/ajtran303/banner/issues
-
 ```
 
 ## What is a horizontal rule?
