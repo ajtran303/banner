@@ -48,8 +48,8 @@ $ ruby banner.rb -sl 'SQUIGGLES-LEFT'
 ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
 $ ruby banner.rb -ss 'SUPER-SQUIGGLES'
 
-banner.rb by AJ Tran, May 2020
-https://github.com/ajtran303/banner
+Found a bug? Let me know!
+https://github.com/ajtran303/banner/issues
 ```
 
 ## What is a horizontal rule?
