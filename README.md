@@ -2,7 +2,7 @@
 
 A Ruby program to easily pretty print horizontal rules to the Command Line.
 
-### `$ ruby horizontal_ruler_demo.rb`
+### `$ ruby util/horizontal_ruler_demo.rb`
 
 ```
 ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~

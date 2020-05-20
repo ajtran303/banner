@@ -1,4 +1,4 @@
-require "./horizontal_ruler"
+require "./lib/horizontal_ruler"
 require "minitest/autorun"
 require "minitest/pride"
 
