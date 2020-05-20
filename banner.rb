@@ -16,8 +16,17 @@ class Banner < HorizontalRuler
     check_for_help_flag
     check_for_valid_flag
     @banner_message = LetterSpacer.new(@message).output
-
     autorun
+  end
+
+  def check_for_help_flag
+    open_help_menu if need_help?
+    exit if need_help?
+  end
+
+  def need_help?
+    ARGV.include?("-h") ||
+    ARGV.include?("-help")
   end
 
   def check_for_valid_flag
@@ -38,78 +47,63 @@ class Banner < HorizontalRuler
     puts render_squiggles_right
     puts
     help_section
+    flag_options
     credits
-  end
-
-  def credits
-    puts "Found a bug? Let me know!"
-    puts "https://github.com/ajtran303/banner/issues"
   end
 
   def help_section
     puts "$ ruby banner.rb -h/-help"
     puts
     puts "> Display this help menu and exit"
-    puts "> Use flags to set horizontal rule"
+    puts "> Use a flag to set horizontal rule"
     puts "> Use single-quotes to wrap input"
     puts
-    flag_options
   end
 
   def flag_options
-    bar_option
-    double_bar_option
-    dot_option
-    double_dot_option
-    squiggle_option
+    bar_options
+    dot_options
+    squiggle_options
   end
 
-  def bar_option
-    puts render_bars
+  def bar_options
     puts "$ ruby banner.rb -b 'BARS'"
+    puts render_bars
     puts
-  end
-
-  def double_bar_option
-    puts double_render_bars
     puts "$ ruby banner.rb -db 'DOUBLE BARS'"
+
+    puts double_render_bars
     puts
   end
 
-  def dot_option
-    puts render_dots
+  def dot_options
     puts "$ ruby banner.rb -d 'DOTS'"
+    puts render_dots
     puts
-  end
-
-  def double_dot_option
-    puts double_render_dots
     puts "$ ruby banner.rb -dd 'DOUBLE DOTS'"
+
+    puts double_render_dots
     puts
   end
 
-  def squiggle_option
-    puts render_squiggles_right
+  def squiggle_options
     puts "$ ruby banner.rb -sr 'SQUIGGLES-RIGHT'"
+    puts render_squiggles_right
     puts
 
-    puts render_squiggles_left
     puts "$ ruby banner.rb -sl 'SQUIGGLES-LEFT'"
+    puts render_squiggles_left
     puts
 
-    puts render_super_squiggles
     puts "$ ruby banner.rb -ss 'SUPER-SQUIGGLES'"
+    puts render_super_squiggles
     puts
   end
 
-  def check_for_help_flag
-    open_help_menu if need_help?
-    exit if need_help?
-  end
-
-  def need_help?
-    ARGV.include?("-h") ||
-    ARGV.include?("-help")
+  def credits
+    puts "Found a bug? Let me know!"
+    puts "https://github.com/ajtran303/banner/issues"
+    puts
   end
 
   def autorun
