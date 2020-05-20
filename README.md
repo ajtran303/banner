@@ -15,11 +15,11 @@ The flag argument can be set to one of the following:
 
 ```
   -b = bars,
-  -d = double bars,
+  -db = double bars,
   -d = dots,
-  -d = double dots,
-  -s = squiggles (left),
-  -s = squiggles (right),
+  -dd = double dots,
+  -sl = squiggles (left),
+  -sr = squiggles (right),
   -ss = super squiggles
 ```
 
