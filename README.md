@@ -1,8 +1,32 @@
-# horizontal_ruler.rb
+# banner_printer.rb
 
-A Ruby program to easily pretty print horizontal rules to the Command Line.
+A Ruby program to easily print pretty banner messages.
 
-### `$ ruby util/horizontal_ruler_demo.rb`
+#### $ ruby banner_printer -ss 'HELLO WORLD'
+```
+~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
+ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
+       Y O U   C A N   D O   I T
+~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
+ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
+```
+
+The flag argument can be set to one of the following:
+
+```
+  -b = bars,
+  -d = double bars,
+  -d = dots,
+  -d = double dots,
+  -s = squiggles (left),
+  -s = squiggles (right),
+  -ss = super squiggles
+```
+
+## What is a horizontal rule?
+
+#### $ ruby util/horizontal_ruler_demo.rb
+
 
 ```
 ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~
