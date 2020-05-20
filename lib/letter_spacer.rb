@@ -1,10 +1,12 @@
 class LetterSpacer
-  attr_reader :message, :output
+  attr_reader :output
 
   def initialize(message)
     @message = message
     @output = space_it[0...40]
   end
+
+  private
 
   def split_it
     @message.join.split("")
@@ -33,6 +35,3 @@ class LetterSpacer
   end
 
 end
-
-
-# puts LetterSpacer.new(["Hello"]).output
