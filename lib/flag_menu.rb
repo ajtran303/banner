@@ -8,11 +8,15 @@ class FlagMenu
   end
 
   def show_flag_options
+    show_name
     show_examples
     show_double_options
     show_squiggle_options
     show_single_options
-    show_secret_option
+  end
+
+  def show_name
+    puts align_to_ruler_center("    H O R I Z O N T A L  R U L E - S S")
   end
 
   def show_single_options
@@ -32,10 +36,5 @@ class FlagMenu
     puts join_half_rules(render_squiggles_left, render_squiggles_right)
     puts join_half_rules(render_bars, render_dots)
   end
-
-  def show_secret_option
-    puts align_to_ruler_center("-ss 'SUPER-SECRET'")
-  end
-
 
 end
