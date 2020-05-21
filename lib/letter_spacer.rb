@@ -3,7 +3,7 @@ class LetterSpacer
 
   def initialize(message)
     @message = message
-    @output = get_spaced_message[0...40]
+    @output = generate_spaced_message[0...40]
   end
 
   private
@@ -20,18 +20,8 @@ class LetterSpacer
     generate_message_as_characters.zip(generate_spaces_equal_to_characters).flatten!
   end
 
-  def generate_message_as_string
+  def generate_spaced_message
     merge_characters_and_spaces.join
-  end
-
-  def generate_spaces_to_prepend
-    ((40 - generate_message_as_string.length) / 2)
-  end
-
-  def get_spaced_message
-    new_message = generate_message_as_string
-    generate_spaces_to_prepend.times { new_message.prepend(" ") }
-    new_message
   end
 
 end

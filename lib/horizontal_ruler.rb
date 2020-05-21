@@ -1,4 +1,4 @@
-class HorizontalRuler
+module HorizontalRuler
 
   def render_bars
     duplicate("=", 40)
@@ -28,16 +28,28 @@ class HorizontalRuler
     double(render_dots)
   end
 
-  private
-
   def duplicate(character, number_of_times)
     output = ""
     number_of_times.times { output += character}
     output
   end
 
-  def double(render_rule)
-    render_rule + "\n" + render_rule
+  def double(horizontal_rule)
+    horizontal_rule + "\n" + horizontal_rule
+  end
+
+  def align_to_ruler_center(message)
+    spaces_to_prepend = (40 - message.length) / 2
+    spaces_to_prepend.times { message.prepend " "}
+    message
+  end
+
+  def join_half_rules(left_rule, right_rule)
+    "#{half_render(left_rule)}|#{half_render(right_rule)}"
+  end
+
+  def half_render(horizontal_rule)
+    horizontal_rule[0..20]
   end
 
 end
