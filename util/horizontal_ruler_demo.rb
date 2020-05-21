@@ -7,22 +7,20 @@ class HorizontalRulerDemo
     autorun
   end
 
-  def body
-    puts align_to_ruler_center("A horizontal rule is a line that")
-    puts align_to_ruler_center("separates content above and below it.")
-    puts align_to_ruler_center("Horizontal rules are used to indicate")
-    puts align_to_ruler_center("breaks and transitions in theme.")
+  def answer
+    puts align_to_ruler_center("A1: To separate content by theme!")
+    puts align_to_ruler_center("A2: Yes, I love them!")
   end
 
-  def intro_banner
-    puts align_to_ruler_center(half_render(render_dots))
-    puts align_to_ruler_center("horizontal_ruler_demo.rb")
-    puts align_to_ruler_center(half_render(render_dots))
+  def question
+    puts align_to_ruler_center("Q1: What is a horizontal rule used for?")
+    puts align_to_ruler_center("Q2: Do you like animals?")
   end
 
   def autorun
-    intro_banner
-    body
+    question
+    puts render_dots
+    answer
   end
 
 end

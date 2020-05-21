@@ -17,17 +17,12 @@ Make banner:  $ ruby banner.rb -b 'BARS'
 All options:  $ ruby banner.rb -hr
 ```
 
-## What is a horizontal rule?
-
-#### `$ ruby util/horizontal_ruler_demo.rb`
-
-
+<!--
 ```
-         :::::::::::::::::::::
-        horizontal_ruler_demo.rb
-    A horizontal rule is a line that
- separates content above and below it.
- Horizontal rules are used to indicate
- major thematic breaks and transitions.
+$ ruby util/horizontal_ruler_demo.rb
+Q1: What is a horizontal rule used for?
+        Q2: Do you like animals?
 ::::::::::::::::::::::::::::::::::::::::
-```
+   A1: To separate content by theme!
+         A2: Yes, I love them!
+``` -->
