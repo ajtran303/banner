@@ -37,4 +37,5 @@ class FlagMenu
     puts join_half_rules(render_bars, render_dots)
   end
 
+
 end
