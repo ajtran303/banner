@@ -16,6 +16,7 @@ class HelpMenu
 
   def show_help_section
     puts "Make banner:  $ ruby banner.rb -b 'BARS'"
+    puts "All options:  $ ruby banner.rb -hr"
   end
 
 end
