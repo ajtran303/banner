@@ -54,8 +54,7 @@ class Banner
   end
 
   def flag_warning_message
-    puts "Rule not found. Example input: $ ruby banner.rb -b 'BARS'"
-    puts "                Look up rules: $ ruby banner.rb -hr"
+    puts "Rule not found. Find rules: $ ruby banner.rb -hr"
   end
 
   def output_message
