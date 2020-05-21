@@ -13,13 +13,13 @@ class Banner
       "-dd" => double_render_dots,
       "-sl" => render_squiggles_left,
       "-sr" => render_squiggles_right,
-      "-ss" => render_super_squiggles,
+      "-ss" => render_super_squiggles
     }
     @flag, *@message = ARGV
     check_for_help_flag
     check_for_valid_flag
     @banner_message = LetterSpacer.new(@message).output
-    autorun
+    output_message
   end
 
   def open_flag_menu
@@ -58,7 +58,7 @@ class Banner
     puts "                Look up rules: $ ruby banner.rb -hr"
   end
 
-  def autorun
+  def output_message
     puts @options[@flag.downcase]
     puts align_to_ruler_center(@banner_message)
     puts @options[@flag.downcase]
