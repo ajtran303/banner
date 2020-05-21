@@ -1,46 +1,28 @@
 require "./lib/horizontal_ruler"
 
-class HorizontalRulerDemo < HorizontalRuler
+class HorizontalRulerDemo
+  include HorizontalRuler
 
   def initialize
     autorun
   end
 
-  def title
-    " H O R I Z O N T A L _ R U L E R . R B"
-  end
-
-  def intro
-    "A Ruby program to easily pretty print\n"+
-    "horizontal rules to the Command Line."
-  end
-
   def body
-    "A horizontal rule is a line that\n"+
-    "separates content above and below it.\n"+
-    "\n"+
-    "Horizontal rules are used to visually\n"+
-    "denote thematic breaks and transitions.\n"
+    puts align_to_ruler_center("A horizontal rule is a line that")
+    puts align_to_ruler_center("separates content above and below it.")
+    puts align_to_ruler_center("Horizontal rules are used to indicate")
+    puts align_to_ruler_center("breaks and transitions in theme.")
   end
 
-  def ending
-    "Check out the demo file to see it work!"
+  def intro_banner
+    puts align_to_ruler_center(half_render(render_dots))
+    puts align_to_ruler_center("horizontal_ruler_demo.rb")
+    puts align_to_ruler_center(half_render(render_dots))
   end
 
   def autorun
-    puts render_super_squiggles
-    puts title
-    puts render_super_squiggles
-    puts
-    puts intro
-    puts
-    puts double_render_dots
-    puts
-    puts body
-    puts
-    puts render_bars
-    puts
-    puts ending
+    intro_banner
+    body
   end
 
 end
