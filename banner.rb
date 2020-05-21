@@ -1,8 +1,10 @@
+require "./lib/flag_menu"
 require "./lib/help_menu"
 require "./lib/horizontal_ruler"
 require "./lib/letter_spacer"
 
-class Banner < HorizontalRuler
+class Banner
+  include HorizontalRuler
 
   def initialize
     @options = { "-b" => render_bars,
@@ -20,18 +22,28 @@ class Banner < HorizontalRuler
     autorun
   end
 
+  def open_flag_menu
+    FlagMenu.new
+  end
+
   def check_for_help_flag
+    open_flag_menu if need_flags?
     open_help_menu if need_help?
-    exit if need_help?
+    exit if need_help? || need_flags?
   end
 
   def open_help_menu
     HelpMenu.new
   end
 
+  def need_flags?
+    ARGV.include?("-hr")
+  end
+
   def need_help?
+    ARGV.include?("-help") ||
     ARGV.include?("-h") ||
-    ARGV.include?("-help")
+    ARGV.empty?
   end
 
   def check_for_valid_flag
@@ -42,14 +54,13 @@ class Banner < HorizontalRuler
   end
 
   def flag_warning_message
-    puts "Horizonal rule not found."
-    puts "Need help? Try:"
-    puts "$ ruby banner.rb -help"
+    puts "Rule not found. Example input: $ ruby banner.rb -b 'BARS'"
+    puts "                Look up rules: $ ruby banner.rb -hr"
   end
 
   def autorun
     puts @options[@flag.downcase]
-    puts @banner_message
+    puts align_to_ruler_center(@banner_message)
     puts @options[@flag.downcase]
   end
 
