@@ -1,4 +1,4 @@
-require "./lib/horizontal_ruler"
+require_relative "./horizontal_ruler"
 
 class FlagMenu
   include HorizontalRuler

@@ -1,7 +1,7 @@
-require "./lib/flag_menu"
-require "./lib/help_menu"
-require "./lib/horizontal_ruler"
-require "./lib/letter_spacer"
+require_relative "./lib/flag_menu"
+require_relative "./lib/help_menu"
+require_relative "./lib/horizontal_ruler"
+require_relative "./lib/letter_spacer"
 
 class Banner
   include HorizontalRuler
